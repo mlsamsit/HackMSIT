@@ -1,4 +1,31 @@
+'use client';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export default function CommunitySection() {
+  const container = useRef(null);
+
+  useGSAP(() => {
+    gsap.from('.community-node', {
+      scrollTrigger: {
+        trigger: container.current,
+        start: 'top 75%',
+        toggleActions: 'play none none reverse',
+      },
+      scale: 0.5,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: 'back.out(1.7)'
+    });
+  }, { scope: container });
+
   const communityNodes = [
     {
       icon: 'forum',
@@ -48,7 +75,7 @@ export default function CommunitySection() {
   ];
 
   return (
-    <section className="py-32 px-6" id="community">
+    <section ref={container} className="py-32 px-6" id="community">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-xl">
@@ -64,11 +91,11 @@ export default function CommunitySection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="community-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {communityNodes.map((node, idx) => (
             <a
               key={idx}
-              className="glass-card p-10 rounded-2xl border border-white/5 hover:bg-surface-container-high hover:-translate-y-2 transition-all flex flex-col items-center text-center group"
+              className="community-node glass-card p-10 rounded-2xl border border-white/5 hover:bg-surface-container-high hover:-translate-y-2 transition-all flex flex-col items-center text-center group"
               href="#"
             >
               <div
