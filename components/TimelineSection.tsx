@@ -1,4 +1,12 @@
-// components/Timeline.tsx
+'use client';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface TimelineEvent {
   id: string;
@@ -9,89 +17,111 @@ interface TimelineEvent {
   borderColor: string;
   shadowColor: string;
   textColor: string;
-  side: "left" | "right";
+  side: 'left' | 'right';
 }
 
 const timelineEvents: TimelineEvent[] = [
   {
-    id: "01",
-    title: "Registration Starts",
-    date: "OCT 15, 2024",
-    leftDesc: "Apply to join the void elite.",
-    rightDesc: "Phase one of recruitment begins across all global channels.",
-    borderColor: "border-primary",
-    shadowColor: "shadow-[0_0_15px_rgba(204,151,255,0.6)]",
-    textColor: "text-primary",
-    side: "right",
+    id: '01',
+    title: 'Registration Opens',
+    date: 'MAR 15, 2024',
+    leftDesc: 'Apply to join the void elite.',
+    rightDesc: 'Phase one of recruitment begins across all global channels.',
+    borderColor: 'border-primary',
+    shadowColor: 'shadow-[0_0_15px_rgba(204,151,255,0.6)]',
+    textColor: 'text-primary',
+    side: 'right',
   },
   {
-    id: "02",
-    title: "Opening Ceremony",
-    date: "NOV 01, 2024",
-    leftDesc: "The ether opens. Keynote speeches from industry titans.",
-    rightDesc: "Digital portal activation.",
-    borderColor: "border-secondary",
-    shadowColor: "shadow-[0_0_15px_rgba(148,146,255,0.6)]",
-    textColor: "text-secondary",
-    side: "left",
+    id: '02',
+    title: 'Opening Ceremony',
+    date: 'APR 10, 2024',
+    leftDesc: 'The ether opens. Keynote speeches from industry titans.',
+    rightDesc: 'Digital portal activation.',
+    borderColor: 'border-secondary',
+    shadowColor: 'shadow-[0_0_15px_rgba(148,146,255,0.6)]',
+    textColor: 'text-secondary',
+    side: 'left',
   },
   {
-    id: "03",
-    title: "Workshop Marathon",
-    date: "NOV 02, 2024",
-    leftDesc: "Deep dives into the tech stack.",
-    rightDesc: "Intensive sessions on AI, Blockchain, and spatial tools.",
-    borderColor: "border-tertiary",
-    shadowColor: "shadow-[0_0_15px_rgba(140,231,255,0.6)]",
-    textColor: "text-tertiary",
-    side: "right",
+    id: '03',
+    title: 'Hacking Begins',
+    date: 'APR 10, 2024',
+    leftDesc: 'Intense 24-hours of building, designing, and coding.',
+    rightDesc: 'Deep dives into the tech stack.',
+    borderColor: 'border-tertiary',
+    shadowColor: 'shadow-[0_0_15px_rgba(140,231,255,0.6)]',
+    textColor: 'text-tertiary',
+    side: 'right',
   },
   {
-    id: "04",
-    title: "Final Submission",
-    date: "NOV 03, 2024",
-    leftDesc: "Last chance to push your code to the mainnet.",
-    rightDesc: "The forge cools down.",
-    borderColor: "border-error",
-    shadowColor: "shadow-[0_0_15px_rgba(255,110,132,0.6)]",
-    textColor: "text-error",
-    side: "left",
+    id: '04',
+    title: 'Final Submission',
+    date: 'APR 11, 2024',
+    leftDesc: 'Last chance to push your code to the mainnet.',
+    rightDesc: 'The forge cools down.',
+    borderColor: 'border-error',
+    shadowColor: 'shadow-[0_0_15px_rgba(255,110,132,0.6)]',
+    textColor: 'text-error',
+    side: 'left',
   },
 ];
 
-export default function Timeline(): React.JSX.Element {
+export default function TimelineSection() {
+  const container = useRef(null);
+
+  useGSAP(() => {
+    // Animate the vertical line drawing down
+    gsap.from('.timeline-line', {
+      scrollTrigger: {
+        trigger: '.timeline-container',
+        start: 'top 60%',
+        end: 'bottom 80%',
+        scrub: 1,
+      },
+      scaleY: 0,
+      transformOrigin: 'top center',
+      ease: 'none'
+    });
+
+    // Animate each event popping in
+    const eventsHtml = gsap.utils.toArray('.timeline-event');
+    eventsHtml.forEach((event: any, i) => {
+      gsap.from(event, {
+        scrollTrigger: {
+          trigger: event,
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'back.out(1.5)',
+      });
+    });
+  }, { scope: container });
+
   return (
-    <section
-      className="py-32 bg-surface-container-low relative"
-      id="timeline"
-    >
+    <section ref={container} className="py-32 relative" id="timeline">
       <div className="max-w-4xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <span className="label-md uppercase tracking-[0.2em] text-primary mb-4 block">
-            Event Roadmap
-          </span>
+        <div className="text-center mb-20 timeline-event">
+          <span className="label-md uppercase tracking-[0.2em] text-primary mb-4 block">Event Roadmap</span>
           <h2 className="font-headline font-bold text-5xl">Digital Sequence</h2>
         </div>
 
-        {/* Timeline */}
-        <div className="relative">
+        <div className="relative timeline-container">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-transparent" />
+          <div className="timeline-line absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-secondary to-transparent"></div>
 
           <div className="space-y-24">
-            {timelineEvents.map((event: TimelineEvent) => (
-              <div
-                key={event.id}
-                className="relative flex items-center justify-between"
-              >
+            {timelineEvents.map((event, idx) => (
+              <div key={idx} className="timeline-event relative flex items-center justify-between">
+                
                 {/* Left Column */}
                 <div className="w-5/12 text-right">
-                  {event.side === "right" ? (
+                  {event.side === 'left' ? (
                     <div className="hidden md:block">
-                      <h4 className="font-headline font-bold text-xl text-white">
-                        {event.title}
-                      </h4>
+                      <h4 className="font-headline font-bold text-xl text-white">{event.title}</h4>
                       <p className="text-slate-400">{event.leftDesc}</p>
                     </div>
                   ) : (
@@ -111,7 +141,7 @@ export default function Timeline(): React.JSX.Element {
 
                 {/* Center Node */}
                 <div
-                  className={`relative z-10 w-12 h-12 flex items-center justify-center rounded-full bg-surface-container border-2 ${event.borderColor} ${event.shadowColor}`}
+                  className={`relative z-10 w-12 h-12 flex items-center justify-center rounded-full bg-black/60 backdrop-blur-md border-2 ${event.borderColor} ${event.shadowColor}`}
                 >
                   <span className={`${event.textColor} font-bold`}>
                     {event.id}
@@ -120,7 +150,14 @@ export default function Timeline(): React.JSX.Element {
 
                 {/* Right Column */}
                 <div className="w-5/12 text-left">
-                  {event.side === "right" ? (
+                  {event.side === 'right' ? (
+                    <div className="hidden md:block">
+                      <h4 className="font-headline font-bold text-xl text-white">
+                        {event.title}
+                      </h4>
+                      <p className="text-slate-400">{event.rightDesc}</p>
+                    </div>
+                  ) : (
                     <>
                       <span className="md:hidden block font-headline font-bold text-xl text-white mb-1">
                         {event.title}
@@ -132,15 +169,9 @@ export default function Timeline(): React.JSX.Element {
                         {event.rightDesc}
                       </p>
                     </>
-                  ) : (
-                    <div className="hidden md:block">
-                      <h4 className="font-headline font-bold text-xl text-white">
-                        {event.title}
-                      </h4>
-                      <p className="text-slate-400">{event.rightDesc}</p>
-                    </div>
                   )}
                 </div>
+
               </div>
             ))}
           </div>

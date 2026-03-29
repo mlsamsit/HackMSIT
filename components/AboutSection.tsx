@@ -1,4 +1,44 @@
+'use client';
+import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
 export default function AboutSection() {
+  const container = useRef(null);
+
+  useGSAP(() => {
+    gsap.from('.about-element', {
+      scrollTrigger: {
+        trigger: container.current,
+        start: 'top 60%',
+        toggleActions: 'play none none reverse',
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: 'power3.out'
+    });
+
+    gsap.from('.track-card', {
+      scrollTrigger: {
+        trigger: container.current,
+        start: 'top 50%',
+        toggleActions: 'play none none reverse',
+      },
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: 'back.out(1.7)'
+    });
+  }, { scope: container });
+
   const tracks = [
     {
       icon: 'hive',
@@ -33,37 +73,37 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-32 px-6 max-w-7xl mx-auto" id="about">
+    <section ref={container} className="py-32 px-6 max-w-7xl mx-auto" id="about">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <div>
-          <h2 className="font-headline font-bold text-4xl md:text-5xl mb-8 leading-tight">
+          <h2 className="about-element font-headline font-bold text-4xl md:text-5xl mb-8 leading-tight">
             Transcend the <span className="text-tertiary">Standard</span> Build
           </h2>
           <div className="space-y-6 text-on-surface-variant leading-relaxed text-lg">
-            <p>
-              Neon Ether is not just another hackathon. It's a high-pressure digital forge designed to test the limits of what's possible
+            <p className="about-element">
+              HACKMSIT is not just another hackathon. It's a high-pressure digital forge designed to test the limits of what's possible
               when the constraints of physical reality are stripped away.
             </p>
-            <p>Our focus is on three core pillars of the future digital landscape. We provide the tools, the mentorship, and the atmosphere—you provide the vision.</p>
+            <p className="about-element">Our focus is on three core pillars of the future digital landscape. We provide the tools, the mentorship, and the atmosphere—you provide the vision.</p>
           </div>
-          <div className="mt-12 flex items-center gap-4">
+          <div className="about-element mt-12 flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
               <span className="material-symbols-outlined text-primary" data-icon="rocket_launch">
                 rocket_launch
               </span>
             </div>
             <div>
-              <div className="font-bold text-white">72 Hours of Code</div>
+              <div className="font-bold text-white">24 Hours of Code</div>
               <div className="text-sm text-slate-500">Intense, focused, collaborative.</div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="track-card-container grid grid-cols-1 md:grid-cols-2 gap-6">
           {tracks.map((track, idx) => (
             <div
               key={idx}
-              className={`glass-card p-8 rounded-xl border-t border-l border-white/10 ${track.borderColor} transition-all group ${track.mt || ''}`}
+              className={`track-card glass-card p-8 rounded-xl border-t border-l border-white/10 ${track.borderColor} transition-all group ${track.mt || ''}`}
             >
               <div className={`mb-6 ${track.color} group-hover:scale-110 transition-transform inline-block`}>
                 <span className="material-symbols-outlined text-4xl" data-icon={track.icon}>
