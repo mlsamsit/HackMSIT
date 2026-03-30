@@ -1,0 +1,58 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/app/_not-found/page-f08302ee705a96b1.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/css/aa89890d6042bed4.css",
+      "static/chunks/app/layout-6afb9d8b7a820824.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/app/page-687dfdffc8d1b6e5.js"
+    ],
+    "/tracks/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/874-992333f59fd2c78c.js",
+      "static/chunks/app/tracks/page-63f974e16398f5f7.js"
+    ],
+    "/rules-faq/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/874-992333f59fd2c78c.js",
+      "static/chunks/app/rules-faq/page-c4c16e502052275d.js"
+    ],
+    "/schedule/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/874-992333f59fd2c78c.js",
+      "static/chunks/app/schedule/page-368eab6aee2e5e77.js"
+    ],
+    "/arena/page": [
+      "static/chunks/webpack-cdd080b7cb227628.js",
+      "static/chunks/4bd1b696-67ee12fb04071d3b.js",
+      "static/chunks/684-71b0b1461a73105d.js",
+      "static/chunks/main-app-f606027245536e13.js",
+      "static/chunks/874-992333f59fd2c78c.js",
+      "static/chunks/app/arena/page-e491c1b977effff4.js"
+    ]
+  }
+}
