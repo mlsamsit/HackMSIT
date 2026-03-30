@@ -1,4 +1,4 @@
-// File: C:\Users\Arnav Kumar\Desktop\v\HackMSIT\app\schedule\page.jsx
+// File: /home/nithin/Projects/HackMSIT/app/schedule/page.jsx
 import * as entry from '../../../../app/schedule/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

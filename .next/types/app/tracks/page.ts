@@ -1,4 +1,4 @@
-// File: C:\Users\Arnav Kumar\Desktop\v\HackMSIT\app\tracks\page.jsx
+// File: /home/nithin/Projects/HackMSIT/app/tracks/page.jsx
 import * as entry from '../../../../app/tracks/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

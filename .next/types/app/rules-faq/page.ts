@@ -1,4 +1,4 @@
-// File: C:\Users\Arnav Kumar\Desktop\v\HackMSIT\app\rules-faq\page.jsx
+// File: /home/nithin/Projects/HackMSIT/app/rules-faq/page.jsx
 import * as entry from '../../../../app/rules-faq/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

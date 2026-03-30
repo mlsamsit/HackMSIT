@@ -15,7 +15,7 @@ export default function TopNav({ active }) {
           className="font-headline text-2xl font-black uppercase tracking-tighter text-[#7C3AED] transition-transform hover:rotate-2"
           href="/arena"
         >
-          HACK-A-THON
+          HackMSIT
         </Link>
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => {

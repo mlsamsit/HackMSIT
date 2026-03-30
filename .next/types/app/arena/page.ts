@@ -1,4 +1,4 @@
-// File: C:\Users\Arnav Kumar\Desktop\v\HackMSIT\app\arena\page.jsx
+// File: /home/nithin/Projects/HackMSIT/app/arena/page.jsx
 import * as entry from '../../../../app/arena/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

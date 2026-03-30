@@ -13,8 +13,10 @@ const splineSans = Spline_Sans({
   weight: ["300", "400", "500", "600", "700"]
 });
 
+import LayoutAnimations from "../components/ui/LayoutAnimations";
+
 export const metadata = {
-  title: "HACK-A-THON | Electric Scribble",
+  title: "HackMSIT | Electric Scribble",
   description: "Electric Scribble Hackathon website"
 };
 
@@ -30,7 +32,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${plusJakartaSans.variable} ${splineSans.variable} bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container`}
       >
-        {children}
+        <LayoutAnimations>{children}</LayoutAnimations>
       </body>
     </html>
   );

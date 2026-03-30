@@ -2,7 +2,7 @@ import SiteFooter from "../../components/layout/SiteFooter";
 import TopNav from "../../components/layout/TopNav";
 
 export const metadata = {
-  title: "HACK-A-THON | Tracks"
+  title: "HackMSIT | Tracks"
 };
 
 export default function TracksPage() {

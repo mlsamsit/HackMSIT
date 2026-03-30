@@ -2,7 +2,7 @@ import SiteFooter from "../../components/layout/SiteFooter";
 import TopNav from "../../components/layout/TopNav";
 
 export const metadata = {
-  title: "HACK-A-THON | Schedule"
+  title: "HackMSIT | Schedule"
 };
 
 export default function SchedulePage() {
@@ -217,7 +217,7 @@ export default function SchedulePage() {
         </section>
       </main>
 
-      <SiteFooter brand="HACK-A-THON" />
+      <SiteFooter brand="HackMSIT" />
 
       <div className="fixed bottom-8 right-8 z-50">
         <button className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-2xl transition-all hover:scale-110 active:scale-95">
