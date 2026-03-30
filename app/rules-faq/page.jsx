@@ -2,7 +2,7 @@ import SiteFooter from "../../components/layout/SiteFooter";
 import TopNav from "../../components/layout/TopNav";
 
 export const metadata = {
-  title: "HACK-A-THON | Rules & FAQ"
+  title: "HackMSIT | Rules & FAQ"
 };
 
 export default function RulesFaqPage() {
@@ -207,7 +207,7 @@ export default function RulesFaqPage() {
         </section>
       </main>
 
-      <SiteFooter brand="HACK-A-THON" />
+      <SiteFooter brand="HackMSIT" />
     </>
   );
 }
