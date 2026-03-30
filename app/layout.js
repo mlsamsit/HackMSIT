@@ -1,37 +1,32 @@
 import "./globals.css";
-import { Plus_Jakarta_Sans, Spline_Sans } from "next/font/google";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  weight: ["300", "400", "500", "600", "700", "800"]
-});
-
-const splineSans = Spline_Sans({
-  subsets: ["latin"],
-  variable: "--font-spline-sans",
-  weight: ["300", "400", "500", "600", "700"]
-});
-
+import { Inter, Playfair_Display } from "next/font/google";
 import LayoutAnimations from "../components/ui/LayoutAnimations";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
+
 export const metadata = {
-  title: "HackMSIT | Electric Scribble",
-  description: "Electric Scribble Hackathon website"
+  title: "HackMSIT 2026",
+  description: "Built on Legacy. Driven by Innovation.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html className="light" lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body
-        className={`${plusJakartaSans.variable} ${splineSans.variable} bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container`}
-      >
+      <body className={`${inter.variable} ${playfair.variable} font-sans bg-parchment text-foreground`}>
         <LayoutAnimations>{children}</LayoutAnimations>
       </body>
     </html>
