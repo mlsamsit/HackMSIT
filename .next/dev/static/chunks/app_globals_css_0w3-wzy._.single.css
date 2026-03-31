@@ -1281,6 +1281,10 @@ body {
   border-color: #ffffff4d;
 }
 
+.border-antique-gold\/50 {
+  border-color: #b0905d80;
+}
+
 .border-l-antique-gold {
   --tw-border-opacity: 1;
   border-left-color: rgb(176 144 93 / var(--tw-border-opacity, 1));
@@ -1725,6 +1729,11 @@ body {
   line-height: 1rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-black {
   font-weight: 900;
 }
@@ -1735,6 +1744,10 @@ body {
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -2425,6 +2438,11 @@ body {
   .md\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .md\:opacity-100 {

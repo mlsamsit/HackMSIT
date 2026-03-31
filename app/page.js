@@ -226,9 +226,14 @@ export default function Home() {
           <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-parchment mb-6 drop-shadow-sm">
             HACKMSIT
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }} className="text-lg md:text-2xl font-serif italic text-parchment/90 mb-12">
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }} className="text-lg md:text-2xl font-serif italic text-parchment/90 mb-6">
             Built on Legacy. Driven by Innovation.
           </motion.p>
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} className="flex items-center justify-center gap-4 mb-12">
+            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">10th & 11th</span>
+            <span className="w-2 h-2 rotate-45 border border-antique-gold/50"></span>
+            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">₹30,000 Prize Pool</span>
+          </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="flex flex-col sm:flex-row gap-6">
             <Link href="/arena" className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm">
               Complete Registration
@@ -315,12 +320,12 @@ export default function Home() {
               </motion.div>
             </div>
           </section>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
           {/* <Divider /> */}
           <section id="tracks" className="py-12">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -350,14 +355,15 @@ export default function Home() {
           <section id="prizes" className="py-24">
             <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
               <motion.div {...fadeUp} className="mb-16">
-                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-4">Grants & Recognition</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-2">₹30,000 Prize Pool</h2>
+                <p className="font-sans text-brick-900/60 tracking-widest text-sm uppercase mb-4">Grants & Recognition</p>
                 <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
               </motion.div>
               <div className="space-y-4">
                 {[
-                  { label: "First Honor", amount: "₹1,50,000" },
-                  { label: "Second Honor", amount: "₹1,00,000" },
-                  { label: "Third Honor", amount: "₹75,000" }
+                  { label: "First Honor", amount: "₹15,000" },
+                  { label: "Second Honor", amount: "₹10,000" },
+                  { label: "Third Honor", amount: "₹5,000" }
                 ].map((prize, i) => (
                   <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="py-6 px-8 border border-brick/10 bg-parchment/30 backdrop-blur-sm hover:bg-parchment/50 transition-colors flex justify-between items-center rounded-sm">
                     <span className="font-sans text-sm tracking-widest text-brick-900/60 uppercase font-medium">{prize.label}</span>
@@ -376,10 +382,10 @@ export default function Home() {
               </motion.div>
               <div className="space-y-4">
                 {[
-                  { time: "09:00 AM", event: "Inaugural Ceremony & Briefing" },
-                  { time: "11:00 AM", event: "Hacking Commences" },
-                  { time: "11:00 PM", event: "Midnight Evaluation & Mentoring" },
-                  { time: "09:00 AM", event: "Exhibition & Final Judgment" }
+                  { time: "10th - 09:00 AM", event: "Inaugural Ceremony & Briefing" },
+                  { time: "10th - 11:00 AM", event: "Hacking Commences" },
+                  { time: "10th - 11:00 PM", event: "Midnight Evaluation & Mentoring" },
+                  { time: "11th - 09:00 AM", event: "Exhibition & Final Judgment" }
                 ].map((schedule, i) => (
                   <motion.div key={i} {...fadeUp} className="bg-parchment/50 backdrop-blur-sm p-6 flex flex-col md:flex-row md:items-center gap-4 rounded-sm border-l-4 border-l-antique-gold shadow-sm">
                     <div className="font-sans text-sm tracking-widest text-brick-900/60 font-medium w-32 shrink-0">{schedule.time}</div>
