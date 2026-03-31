@@ -75,7 +75,8 @@ const MaharajaElement = () => {
             src="/raja.png"
             alt="Maharaja Portrait"
             fill
-            className="object-contain object-bottom drop-shadow-sm"
+            sizes="(max-width: 768px) 180px, 260px"
+            className="object-contain object-bottom drop-shadow-sm scale-x-[-1]"
           />
         </div>
         <motion.div
@@ -94,31 +95,48 @@ const MaharajaElement = () => {
 };
 
 // Subtle Animated Royal Elements (Dust)
-const DustParticles = () => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-    {[...Array(15)].map((_, i) => (
-      <motion.div
-        key={i}
-        className="absolute w-1 h-1 bg-parchment rounded-full blur-[1px]"
-        initial={{
-          x: Math.random() * 100 + "vw",
-          y: Math.random() * 100 + "vh",
-          opacity: Math.random() * 0.3 + 0.1,
-        }}
-        animate={{
-          y: [null, `-${Math.random() * 30 + 10}vh`],
-          x: [null, `${Math.random() * 20 - 10}vw`],
-          opacity: [null, 0],
-        }}
-        transition={{
-          duration: Math.random() * 15 + 15,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
-    ))}
-  </div>
-);
+const DustParticles = () => {
+  const [particles, setParticles] = useState([]);
+
+  useEffect(() => {
+    setParticles([...Array(15)].map(() => ({
+      x: Math.random() * 100 + "vw",
+      y: Math.random() * 100 + "vh",
+      opacity: Math.random() * 0.3 + 0.1,
+      targetY: `-${Math.random() * 30 + 10}vh`,
+      targetX: `${Math.random() * 20 - 10}vw`,
+      duration: Math.random() * 15 + 15
+    })));
+  }, []);
+
+  if (particles.length === 0) return null;
+
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
+      {particles.map((p, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-parchment rounded-full blur-[1px]"
+          initial={{
+            x: p.x,
+            y: p.y,
+            opacity: p.opacity,
+          }}
+          animate={{
+            y: [null, p.targetY],
+            x: [null, p.targetX],
+            opacity: [null, 0],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      ))}
+    </div>
+  );
+};
 
 // Slight Birds Animation
 const BirdsAnimation = () => (
