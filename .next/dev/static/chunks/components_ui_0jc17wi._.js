@@ -58,7 +58,7 @@ function InteractiveCursor() {
                     x: mousePosition.x - 12,
                     y: mousePosition.y - 12,
                     scale: isHovered ? 2 : 1,
-                    backgroundColor: isHovered ? "rgba(var(--color-primary), 0.2)" : "transparent"
+                    backgroundColor: isHovered ? "rgba(var(--color-primary), 0.2)" : "rgba(0, 0, 0, 0)"
                 },
                 transition: {
                     type: "spring",
