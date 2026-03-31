@@ -31,7 +31,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/zap.js [app-client] (ecmascript) <export default as Zap>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature(), _s3 = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -1039,80 +1039,497 @@ const FinalCall = ()=>{
     }, ("TURBOPACK compile-time value", void 0));
 };
 _c3 = FinalCall;
-const MSITCampusEnvironment = ({ children })=>{
+// --- Enhanced Atmospheric Elements ---
+const BullockCartWheel = ({ className })=>{
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+        animate: {
+            rotate: 360,
+            y: [
+                0,
+                -2,
+                0
+            ]
+        },
+        transition: {
+            rotate: {
+                duration: 180,
+                repeat: Infinity,
+                ease: "linear"
+            },
+            y: {
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut"
+            }
+        },
+        className: `opacity-[0.08] pointer-events-none select-none ${className}`,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 100 100",
+            className: "w-80 h-80 md:w-[500px] md:h-[500px] text-brick-900 fill-none stroke-current",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                    cx: "50",
+                    cy: "50",
+                    r: "48",
+                    strokeWidth: "2.5"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 383,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                    cx: "50",
+                    cy: "50",
+                    r: "43",
+                    strokeWidth: "1"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 384,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                    cx: "50",
+                    cy: "50",
+                    r: "10",
+                    strokeWidth: "2"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 387,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                    cx: "50",
+                    cy: "50",
+                    r: "3",
+                    fill: "currentColor"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 388,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                [
+                    ...Array(12)
+                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
+                        x1: "50",
+                        y1: "50",
+                        x2: 50 + 43 * Math.cos(i * 30 * Math.PI / 180),
+                        y2: 50 + 43 * Math.sin(i * 30 * Math.PI / 180),
+                        strokeWidth: "1.5",
+                        strokeLinecap: "round"
+                    }, i, false, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 392,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0))),
+                [
+                    ...Array(24)
+                ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                        cx: 50 + 45.5 * Math.cos(i * 15 * Math.PI / 180),
+                        cy: 50 + 45.5 * Math.sin(i * 15 * Math.PI / 180),
+                        r: "0.4",
+                        fill: "currentColor",
+                        opacity: "0.6"
+                    }, i, false, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 405,
+                        columnNumber: 11
+                    }, ("TURBOPACK compile-time value", void 0)))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/InteractiveSections.jsx",
+            lineNumber: 381,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/components/InteractiveSections.jsx",
+        lineNumber: 370,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c4 = BullockCartWheel;
+const PalaceArch = ({ className })=>{
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+        initial: {
+            opacity: 0
+        },
+        animate: {
+            opacity: [
+                0,
+                0.05,
+                0
+            ]
+        },
+        transition: {
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut"
+        },
+        className: `pointer-events-none select-none ${className}`,
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            viewBox: "0 0 200 100",
+            className: "w-full h-auto text-brick-900/30 fill-none stroke-current",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M20,100 L20,60 C20,35 50,10 100,10 C150,10 180,35 180,60 L180,100",
+                    strokeWidth: "0.3",
+                    strokeDasharray: "3 6"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 429,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    d: "M40,100 L40,70 C40,50 65,30 100,30 C135,30 160,50 160,70 L160,100",
+                    strokeWidth: "0.1"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 434,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
+                    cx: "100",
+                    cy: "45",
+                    r: "4",
+                    strokeWidth: "0.05",
+                    opacity: "0.2"
+                }, void 0, false, {
+                    fileName: "[project]/components/InteractiveSections.jsx",
+                    lineNumber: 439,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/InteractiveSections.jsx",
+            lineNumber: 427,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    }, void 0, false, {
+        fileName: "[project]/components/InteractiveSections.jsx",
+        lineNumber: 421,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_c5 = PalaceArch;
+const AtmosphericRays = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative w-full overflow-hidden bg-parchment",
+        className: "absolute inset-0 overflow-hidden pointer-events-none",
         children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 pointer-events-none z-0",
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute top-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply"
-                    }, void 0, false, {
-                        fileName: "[project]/components/InteractiveSections.jsx",
-                        lineNumber: 374,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute left-[5%] top-[10%] w-[1px] h-[80%] bg-gradient-to-b from-transparent via-brick-900/10 to-transparent"
-                    }, void 0, false, {
-                        fileName: "[project]/components/InteractiveSections.jsx",
-                        lineNumber: 377,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute right-[5%] top-[5%] w-[1px] h-[90%] bg-gradient-to-b from-transparent via-brick-900/15 to-transparent"
-                    }, void 0, false, {
-                        fileName: "[project]/components/InteractiveSections.jsx",
-                        lineNumber: 378,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0)),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                        animate: {
-                            x: [
-                                "-100vw",
-                                "100vw"
-                            ]
-                        },
-                        transition: {
-                            duration: 40,
-                            repeat: Infinity,
-                            ease: "linear"
-                        },
-                        className: "absolute top-0 w-[40vw] h-full bg-gradient-to-r from-transparent via-parchment/40 to-transparent mix-blend-overlay rotate-[15deg]"
-                    }, void 0, false, {
-                        fileName: "[project]/components/InteractiveSections.jsx",
-                        lineNumber: 381,
-                        columnNumber: 9
-                    }, ("TURBOPACK compile-time value", void 0))
-                ]
-            }, void 0, true, {
-                fileName: "[project]/components/InteractiveSections.jsx",
-                lineNumber: 373,
-                columnNumber: 7
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "relative z-10 w-full",
-                children: children
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                animate: {
+                    x: [
+                        "-10vw",
+                        "10vw"
+                    ],
+                    opacity: [
+                        0.03,
+                        0.08,
+                        0.03
+                    ]
+                },
+                transition: {
+                    duration: 20,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                },
+                className: "absolute top-[-50%] left-[-20%] w-[140%] h-[200%] bg-gradient-to-br from-parchment/30 via-transparent to-transparent rotate-[25deg] mix-blend-screen"
             }, void 0, false, {
                 fileName: "[project]/components/InteractiveSections.jsx",
-                lineNumber: 389,
+                lineNumber: 448,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                animate: {
+                    x: [
+                        "5vw",
+                        "-5vw"
+                    ],
+                    opacity: [
+                        0.02,
+                        0.06,
+                        0.02
+                    ]
+                },
+                transition: {
+                    duration: 28,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 5
+                },
+                className: "absolute top-[-50%] right-[-10%] w-[100%] h-[200%] bg-gradient-to-bl from-parchment/20 via-transparent to-transparent -rotate-[15deg] mix-blend-screen"
+            }, void 0, false, {
+                fileName: "[project]/components/InteractiveSections.jsx",
+                lineNumber: 456,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/InteractiveSections.jsx",
-        lineNumber: 371,
+        lineNumber: 447,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_c4 = MSITCampusEnvironment;
-var _c, _c1, _c2, _c3, _c4;
+_c6 = AtmosphericRays;
+const DustParticles = ()=>{
+    _s2();
+    const [dots, setDots] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "DustParticles.useEffect": ()=>{
+            setDots([
+                ...Array(20)
+            ].map({
+                "DustParticles.useEffect": ()=>({
+                        x: Math.random() * 100 + "vw",
+                        y: Math.random() * 100 + "vh",
+                        opacity: Math.random() * 0.2,
+                        duration: 20 + Math.random() * 30,
+                        delay: Math.random() * -20
+                    })
+            }["DustParticles.useEffect"]));
+        }
+    }["DustParticles.useEffect"], []);
+    if (dots.length === 0) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "absolute inset-0 z-10 pointer-events-none overflow-hidden",
+        children: dots.map((d, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                initial: {
+                    x: d.x,
+                    y: d.y,
+                    opacity: 0
+                },
+                animate: {
+                    x: [
+                        null,
+                        Math.random() * 100 + "vw"
+                    ],
+                    y: [
+                        null,
+                        Math.random() * 100 - 20 + "vh"
+                    ],
+                    opacity: [
+                        0,
+                        d.opacity,
+                        0
+                    ]
+                },
+                transition: {
+                    duration: d.duration,
+                    repeat: Infinity,
+                    ease: "linear",
+                    delay: d.delay
+                },
+                className: "absolute w-1 h-1 bg-parchment rounded-full blur-[1px]"
+            }, i, false, {
+                fileName: "[project]/components/InteractiveSections.jsx",
+                lineNumber: 486,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)))
+    }, void 0, false, {
+        fileName: "[project]/components/InteractiveSections.jsx",
+        lineNumber: 484,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_s2(DustParticles, "Hb0TmV8C2JEhE203+Slzk088ioo=");
+_c7 = DustParticles;
+const MSITCampusEnvironment = ({ children })=>{
+    _s3();
+    const [videoLoaded, setVideoLoaded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "relative w-full border-t border-brick-900/10",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "sticky top-0 h-screen w-full flex justify-center items-center overflow-hidden pointer-events-none z-0 bg-[#ebdac5]",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative w-full aspect-video",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
+                                autoPlay: true,
+                                muted: true,
+                                loop: true,
+                                playsInline: true,
+                                onCanPlay: ()=>setVideoLoaded(true),
+                                className: `w-full h-full object-cover filter grayscale-[0.65] blur-[2px] transition-opacity duration-[2000ms] ${videoLoaded ? 'opacity-[0.20]' : 'opacity-0'}`,
+                                poster: "/heritage_campus_bg.png",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
+                                    src: "/animated_msit.mp4",
+                                    type: "video/mp4"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/InteractiveSections.jsx",
+                                    lineNumber: 531,
+                                    columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0))
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 522,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 bg-gradient-to-t from-parchment/60 via-transparent to-parchment/60 opacity-60"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 534,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 shadow-[inset_0_0_120px_rgba(244,241,234,1)]"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 535,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 521,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-parchment/40 mix-blend-overlay"
+                    }, void 0, false, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 539,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/InteractiveSections.jsx",
+                lineNumber: 520,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative -mt-[100vh] z-10 w-full",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 pointer-events-none z-0 overflow-hidden",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 opacity-[0.10] bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 546,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BullockCartWheel, {
+                                className: "absolute -top-48 -left-48 md:-top-64 md:-left-64 rotate-[15deg]"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 549,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(BullockCartWheel, {
+                                className: "absolute bottom-[10%] -right-48 md:bottom-[15%] md:-right-64 rotate-[-10deg]"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 550,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PalaceArch, {
+                                className: "absolute top-[20%] left-[-10%] w-[60%] max-w-2xl opacity-40"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 553,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PalaceArch, {
+                                className: "absolute bottom-[25%] right-[-15%] w-[70%] max-w-3xl scale-x-[-1] opacity-30"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 554,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AtmosphericRays, {}, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 557,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(DustParticles, {}, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 558,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                                animate: {
+                                    x: [
+                                        "-100%",
+                                        "100%"
+                                    ]
+                                },
+                                transition: {
+                                    duration: 45,
+                                    repeat: Infinity,
+                                    ease: "linear"
+                                },
+                                className: "absolute top-1/2 left-0 w-full h-[30vh] bg-gradient-to-r from-transparent via-parchment/5 to-transparent blur-3xl opacity-20 pointer-events-none"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 561,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-x-0 top-[15%] h-[1px] bg-gradient-to-r from-transparent via-brick-900/10 to-transparent"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 568,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-x-0 bottom-[10%] h-[1px] bg-gradient-to-r from-transparent via-brick-900/10 to-transparent"
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 569,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0)),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute top-[40%] left-0 w-full h-8 opacity-[0.04]",
+                                style: {
+                                    backgroundImage: `url('data:image/svg+xml,%3Csvg width="40" height="8" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 4c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4" fill="none" stroke="%2370322b" stroke-width="0.5"/%3E%3C/svg%3E')`,
+                                    backgroundRepeat: 'repeat-x'
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/components/InteractiveSections.jsx",
+                                lineNumber: 572,
+                                columnNumber: 11
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 545,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative z-10 w-full",
+                        children: children
+                    }, void 0, false, {
+                        fileName: "[project]/components/InteractiveSections.jsx",
+                        lineNumber: 576,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/InteractiveSections.jsx",
+                lineNumber: 543,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0))
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/InteractiveSections.jsx",
+        lineNumber: 518,
+        columnNumber: 5
+    }, ("TURBOPACK compile-time value", void 0));
+};
+_s3(MSITCampusEnvironment, "Rcm2DsS5NfC7GU9WZa7CBm1Rc6I=");
+_c8 = MSITCampusEnvironment;
+var _c, _c1, _c2, _c3, _c4, _c5, _c6, _c7, _c8;
 __turbopack_context__.k.register(_c, "WarRoom");
 __turbopack_context__.k.register(_c1, "ChoosePath");
 __turbopack_context__.k.register(_c2, "TimelineJourney");
 __turbopack_context__.k.register(_c3, "FinalCall");
-__turbopack_context__.k.register(_c4, "MSITCampusEnvironment");
+__turbopack_context__.k.register(_c4, "BullockCartWheel");
+__turbopack_context__.k.register(_c5, "PalaceArch");
+__turbopack_context__.k.register(_c6, "AtmosphericRays");
+__turbopack_context__.k.register(_c7, "DustParticles");
+__turbopack_context__.k.register(_c8, "MSITCampusEnvironment");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
