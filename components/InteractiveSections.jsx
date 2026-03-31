@@ -363,31 +363,219 @@ export const FinalCall = () => {
   );
 };
 
+// --- Enhanced Atmospheric Elements ---
+
+const BullockCartWheel = ({ className }) => {
+  return (
+    <motion.div
+      animate={{
+        rotate: 360,
+        y: [0, -2, 0]
+      }}
+      transition={{
+        rotate: { duration: 180, repeat: Infinity, ease: "linear" },
+        y: { duration: 10, repeat: Infinity, ease: "easeInOut" }
+      }}
+      className={`opacity-[0.08] pointer-events-none select-none ${className}`}
+    >
+      <svg viewBox="0 0 100 100" className="w-80 h-80 md:w-[500px] md:h-[500px] text-brick-900 fill-none stroke-current">
+        {/* Outer Rims - Thick and rustic */}
+        <circle cx="50" cy="50" r="48" strokeWidth="2.5" />
+        <circle cx="50" cy="50" r="43" strokeWidth="1" />
+
+        {/* Hub and Axle Section */}
+        <circle cx="50" cy="50" r="10" strokeWidth="2" />
+        <circle cx="50" cy="50" r="3" fill="currentColor" />
+
+        {/* Spokes (12-spoke traditional arrangement) */}
+        {[...Array(12)].map((_, i) => (
+          <line
+            key={i}
+            x1="50"
+            y1="50"
+            x2={50 + 43 * Math.cos((i * 30 * Math.PI) / 180)}
+            y2={50 + 43 * Math.sin((i * 30 * Math.PI) / 180)}
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        ))}
+
+        {/* Texture detail - dots simulating hardware/wood grain holes */}
+        {[...Array(24)].map((_, i) => (
+          <circle
+            key={i}
+            cx={50 + 45.5 * Math.cos((i * 15 * Math.PI) / 180)}
+            cy={50 + 45.5 * Math.sin((i * 15 * Math.PI) / 180)}
+            r="0.4"
+            fill="currentColor"
+            opacity="0.6"
+          />
+        ))}
+      </svg>
+    </motion.div>
+  );
+};
+
+const PalaceArch = ({ className }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: [0, 0.05, 0] }}
+      transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+      className={`pointer-events-none select-none ${className}`}
+    >
+      <svg viewBox="0 0 200 100" className="w-full h-auto text-brick-900/30 fill-none stroke-current">
+        {/* Mughal/Rajasthani Arch Silhouette */}
+        <path
+          d="M20,100 L20,60 C20,35 50,10 100,10 C150,10 180,35 180,60 L180,100"
+          strokeWidth="0.3"
+          strokeDasharray="3 6"
+        />
+        <path
+          d="M40,100 L40,70 C40,50 65,30 100,30 C135,30 160,50 160,70 L160,100"
+          strokeWidth="0.1"
+        />
+        {/* Central Lotus Motif Seed */}
+        <circle cx="100" cy="45" r="4" strokeWidth="0.05" opacity="0.2" />
+      </svg>
+    </motion.div>
+  );
+};
+
+const AtmosphericRays = () => {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <motion.div
+        animate={{
+          x: ["-10vw", "10vw"],
+          opacity: [0.03, 0.08, 0.03],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-50%] left-[-20%] w-[140%] h-[200%] bg-gradient-to-br from-parchment/30 via-transparent to-transparent rotate-[25deg] mix-blend-screen"
+      />
+      <motion.div
+        animate={{
+          x: ["5vw", "-5vw"],
+          opacity: [0.02, 0.06, 0.02],
+        }}
+        transition={{ duration: 28, repeat: Infinity, ease: "easeInOut", delay: 5 }}
+        className="absolute top-[-50%] right-[-10%] w-[100%] h-[200%] bg-gradient-to-bl from-parchment/20 via-transparent to-transparent -rotate-[15deg] mix-blend-screen"
+      />
+    </div>
+  );
+};
+
+const DustParticles = () => {
+  const [dots, setDots] = useState([]);
+
+  useEffect(() => {
+    setDots([...Array(20)].map(() => ({
+      x: Math.random() * 100 + "vw",
+      y: Math.random() * 100 + "vh",
+      opacity: Math.random() * 0.2,
+      duration: 20 + Math.random() * 30,
+      delay: Math.random() * -20
+    })));
+  }, []);
+
+  if (dots.length === 0) return null;
+
+  return (
+    <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
+      {dots.map((d, i) => (
+        <motion.div
+          key={i}
+          initial={{
+            x: d.x,
+            y: d.y,
+            opacity: 0,
+          }}
+          animate={{
+            x: [null, (Math.random() * 100) + "vw"],
+            y: [null, (Math.random() * 100) - 20 + "vh"],
+            opacity: [0, d.opacity, 0],
+          }}
+          transition={{
+            duration: d.duration,
+            repeat: Infinity,
+            ease: "linear",
+            delay: d.delay
+          }}
+          className="absolute w-1 h-1 bg-parchment rounded-full blur-[1px]"
+        />
+      ))}
+    </div>
+  );
+};
+
 // ----------------------------------------------------
 // 5. CAMPUS ENVIRONMENT WRAPPER
 // ----------------------------------------------------
 export const MSITCampusEnvironment = ({ children }) => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
-    <div className="relative w-full overflow-hidden bg-parchment">
-      {/* Abstract Animated MSIT Brick Environment */}
-      <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 w-full h-full opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply" />
+    <div className="relative w-full border-t border-brick-900/10">
+      {/* Sticky Background Video Layer */}
+      <div className="sticky top-0 h-screen w-full flex justify-center items-center overflow-hidden pointer-events-none z-0 bg-[#ebdac5]">
+        <div className="relative w-full aspect-video">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            onCanPlay={() => setVideoLoaded(true)}
+            className={`w-full h-full object-cover filter grayscale-[0.65] blur-[2px] transition-opacity duration-[2000ms] ${videoLoaded ? 'opacity-[0.20]' : 'opacity-0'}`}
+            poster="/heritage_campus_bg.png"
+          >
+            <source src="/animated_msit.mp4" type="video/mp4" />
+          </video>
+          {/* Inner Vignette / Soft Edges for the background window */}
+          <div className="absolute inset-0 bg-gradient-to-t from-parchment/60 via-transparent to-parchment/60 opacity-60" />
+          <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(244,241,234,1)]" />
+        </div>
 
-        {/* Stylized Architectural Lines overlay */}
-        <div className="absolute left-[5%] top-[10%] w-[1px] h-[80%] bg-gradient-to-b from-transparent via-brick-900/10 to-transparent" />
-        <div className="absolute right-[5%] top-[5%] w-[1px] h-[90%] bg-gradient-to-b from-transparent via-brick-900/15 to-transparent" />
-
-        {/* Subtle Light passing */}
-        <motion.div
-          animate={{ x: ["-100vw", "100vw"] }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute top-0 w-[40vw] h-full bg-gradient-to-r from-transparent via-parchment/40 to-transparent mix-blend-overlay rotate-[15deg]"
-        />
+        {/* Global Soft Overlays covering the rest of the screen */}
+        <div className="absolute inset-0 bg-parchment/40 mix-blend-overlay" />
       </div>
 
-      {/* This renders the War Room, Choose Path, and Timeline over the environment */}
-      <div className="relative z-10 w-full">
-        {children}
+      {/* Content wrapper with negative margin to overlap the sticky background */}
+      <div className="relative -mt-[100vh] z-10 w-full">
+        {/* Atmospheric Heritage Elements */}
+        <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.10] bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] mix-blend-multiply pointer-events-none" />
+
+          {/* Bullock Cart Wheels - Edge placements */}
+          <BullockCartWheel className="absolute -top-48 -left-48 md:-top-64 md:-left-64 rotate-[15deg]" />
+          <BullockCartWheel className="absolute bottom-[10%] -right-48 md:bottom-[15%] md:-right-64 rotate-[-10deg]" />
+
+          {/* Royal Palace Silhouettes */}
+          <PalaceArch className="absolute top-[20%] left-[-10%] w-[60%] max-w-2xl opacity-40" />
+          <PalaceArch className="absolute bottom-[25%] right-[-15%] w-[70%] max-w-3xl scale-x-[-1] opacity-30" />
+
+          {/* Micro-animations: Light Rays & Dust */}
+          <AtmosphericRays />
+          <DustParticles />
+
+          {/* Subtle Horizontal Haze movement */}
+          <motion.div
+            animate={{ x: ["-100%", "100%"] }}
+            transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+            className="absolute top-1/2 left-0 w-full h-[30vh] bg-gradient-to-r from-transparent via-parchment/5 to-transparent blur-3xl opacity-20 pointer-events-none"
+          />
+
+          {/* Faint Architectural Motifs & Dividers */}
+          <div className="absolute inset-x-0 top-[15%] h-[1px] bg-gradient-to-r from-transparent via-brick-900/10 to-transparent" />
+          <div className="absolute inset-x-0 bottom-[10%] h-[1px] bg-gradient-to-r from-transparent via-brick-900/10 to-transparent" />
+
+          {/* Repeating Decorative divider motif at specific junctions */}
+          <div className="absolute top-[40%] left-0 w-full h-8 opacity-[0.04]" style={{ backgroundImage: `url('data:image/svg+xml,%3Csvg width="40" height="8" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0 4c4 0 4-4 8-4s4 4 8 4 4-4 8-4 4 4 8 4 4-4 8-4" fill="none" stroke="%2370322b" stroke-width="0.5"/%3E%3C/svg%3E')`, backgroundRepeat: 'repeat-x' }} />
+        </div>
+
+        {/* Child Sections */}
+        <div className="relative z-10 w-full">
+          {children}
+        </div>
       </div>
     </div>
   );
