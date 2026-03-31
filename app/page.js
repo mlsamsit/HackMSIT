@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown, BookOpen, Users, ShieldCheck } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const quotes = [
   "Honor the past. Build the future.",
@@ -71,10 +72,10 @@ const MaharajaElement = () => {
       >
         <div className="relative w-[180px] h-[220px] md:w-[260px] md:h-[340px] cursor-pointer">
           <Image
-            src="/heritage_maharaja.png"
+            src="/raja.png"
             alt="Maharaja Portrait"
             fill
-            className="object-contain object-bottom drop-shadow-sm opacity-90"
+            className="object-contain object-bottom drop-shadow-sm"
           />
         </div>
         <motion.div
@@ -136,10 +137,10 @@ const BirdsAnimation = () => (
 );
 
 const Divider = () => (
-  <div className="flex items-center justify-center py-16 opacity-60">
-    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent to-antique-gold"></div>
-    <div className="w-2 h-2 rotate-45 border border-antique-gold mx-4"></div>
-    <div className="w-24 h-[1px] bg-gradient-to-l from-transparent to-antique-gold"></div>
+  <div className="flex items-center justify-center py-16 opacity-60 px-6">
+    <div className="flex-1 h-[1px] bg-gradient-to-r from-transparent to-antique-gold"></div>
+    <div className="w-2 h-2 rotate-45 border border-antique-gold mx-4 shrink-0"></div>
+    <div className="flex-1 h-[1px] bg-gradient-to-l from-transparent to-antique-gold"></div>
   </div>
 );
 
@@ -162,9 +163,12 @@ const Navbar = () => {
           <a href="#tracks" className="hover:text-antique-gold transition-colors">Tracks</a>
           <a href="#prizes" className="hover:text-antique-gold transition-colors">Prizes</a>
         </div>
-        <button className={`px-6 py-2 rounded-sm border transition-all font-sans font-medium tracking-wide ${scrolled ? 'border-brick text-brick hover:bg-brick hover:text-parchment' : 'border-parchment text-parchment hover:bg-parchment/10'}`}>
+        <Link
+          href="/arena"
+          className={`px-6 py-2 rounded-sm border transition-all font-sans font-medium tracking-wide ${scrolled ? 'border-brick text-brick hover:bg-brick hover:text-parchment' : 'border-parchment text-parchment hover:bg-parchment/10'}`}
+        >
           Apply Now
-        </button>
+        </Link>
       </div>
     </nav>
   );
@@ -193,16 +197,20 @@ export default function Home() {
       <MaharajaElement />
 
       {/* HERO SECTION */}
-      <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-sandstone-800">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-sandstone-800">
         <DustParticles />
         <motion.div style={{ y: yHeroParallax }} className="absolute inset-0 z-0">
-          <Image
-            src="/heritage_campus_bg.png"
-            alt="MSIT Heritage Campus and Fort"
-            fill
-            className="object-cover object-bottom opacity-80"
-            priority
-          />
+          <video
+            className="h-full w-full object-cover object-center opacity-80"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="metadata"
+            poster="/heritage_campus_bg.png"
+          >
+            <source src="/bg.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-brick-900/50 mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-parchment via-transparent to-transparent opacity-100"></div>
         </motion.div>
@@ -222,12 +230,12 @@ export default function Home() {
             Built on Legacy. Driven by Innovation.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="flex flex-col sm:flex-row gap-6">
-            <button className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm">
+            <Link href="/arena" className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm">
               Complete Registration
-            </button>
-            <button className="px-8 py-3 bg-transparent text-parchment border border-parchment/40 rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:border-parchment transition-all duration-300">
+            </Link>
+            <Link href="/tracks" className="px-8 py-3 bg-transparent text-parchment border border-parchment/40 rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:border-parchment transition-all duration-300">
               Discover More
-            </button>
+            </Link>
           </motion.div>
         </div>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2, duration: 1 }} className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-parchment/60">
@@ -242,12 +250,12 @@ export default function Home() {
           {/* Static gradient sky fallback to smooth the image */}
           <div className="absolute inset-0 bg-gradient-to-b from-parchment via-parchment/80 to-parchment/95 z-0" />
 
-          <motion.div style={{ y: ySky }} className="absolute inset-x-0 -top-[20%] h-[140%] z-10 opacity-70">
+          {/* <motion.div style={{ y: ySky }} className="absolute inset-x-0 -top-[20%] h-[140%] z-10 opacity-70">
             <Image src="/village_sky.png" alt="Village Sky" fill className="object-cover object-top" />
-          </motion.div>
+          </motion.div>  */}
 
           <motion.div style={{ y: yVillage }} className="absolute inset-x-0 top-[10%] h-[110%] z-20 opacity-30">
-            <div className="w-full h-full" style={{ backgroundImage: "url(/village_mid.png)", backgroundSize: "100% auto", backgroundRepeat: "repeat", backgroundPosition: "top" }} />
+            // <div className="w-full h-full" style={{ backgroundImage: "url(/village_mid.png)", backgroundSize: "100% auto", backgroundRepeat: "repeat", backgroundPosition: "top" }} />
           </motion.div>
 
           {/* Slight color washing for readability */}
@@ -256,28 +264,37 @@ export default function Home() {
 
         {/* Global effects over the background but under text */}
         <div className="absolute inset-0 z-10 pointer-events-none">
-          <DustParticles />
-          <BirdsAnimation />
+          {/* <DustParticles />
+          <BirdsAnimation /> */}
         </div>
 
         {/* --- CONTENT BLOCKS --- */}
         <div className="relative z-20">
 
-          <section id="about" className="pt-24 pb-12 max-w-4xl mx-auto px-6 md:px-12 text-center">
-            <motion.div {...fadeUp} className="bg-parchment/40 backdrop-blur-sm p-10 rounded-sm border border-brick/10 shadow-[0_10px_40px_rgba(140,59,42,0.05)]">
-              <h2 className="font-serif text-3xl md:text-4xl text-antique-gold mb-8 font-bold">A Grounded Ecosystem</h2>
+          <Divider />
+          <section
+            id="about"
+            className="w-full min-h-[420px] md:min-h-[560px] px-6 md:px-12 text-center bg-center bg-no-repeat bg-cover flex items-center justify-center"
+            style={{ backgroundImage: "url('/scroll.png')" }}
+          >
+            <motion.div {...fadeUp} className="w-full max-w-4xl py-12 md:py-20">
+              <h2 className="font-serif text-3xl md:text-7xl mb-8 font-bold">A Grounded Ecosystem</h2>
               <p className="font-serif text-xl md:text-2xl leading-relaxed text-brick-900/90">
                 HackMSIT provides a scholarly environment where 1000+ builders converge for 48 hours to craft elegant, meaningful software that withstands the test of time.
               </p>
             </motion.div>
           </section>
-
           <Divider />
 
-          <section id="legacy" className="py-24 overflow-hidden border-y border-brick/5 bg-parchment/20 backdrop-blur-sm">
+
+          <section
+            id="legacy"
+            className="py-24 overflow-hidden border-y border-brick/5 bg-center bg-cover bg-no-repeat"
+            style={{ backgroundImage: "url('/paper.png')" }}
+          >
             <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center">
               <motion.div {...fadeUp} className="order-2 lg:order-1">
-                <h2 className="font-serif text-4xl md:text-5xl text-antique-gold font-bold mb-6">From Legacy to Innovation</h2>
+                <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">From Legacy to Innovation</h2>
                 <div className="w-16 h-[2px] bg-antique-gold mb-8"></div>
                 <div className="space-y-6 text-brick-900/90 font-sans leading-relaxed text-lg">
                   <p>Rooted in the strategic brilliance and undefeated spirit of Maharaja Surajmal, MSIT carries forward a history of building enduring foundations.</p>
@@ -289,17 +306,22 @@ export default function Home() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-                className="relative h-[400px] w-full rounded-sm overflow-hidden shadow-xl border border-antique-gold/30 order-1 lg:order-2 bg-brick-900"
+                className="relative h-[400px] w-full rounded-sm overflow-hidden order-1 lg:order-2"
               >
-                <div className="absolute inset-0 bg-sandstone-800/20 mix-blend-overlay z-10 pointer-events-none" />
+                <div className="absolute inset-0  z-10 pointer-events-none" />
                 <motion.div animate={{ scale: [1, 1.05, 1] }} transition={{ duration: 25, repeat: Infinity, ease: "linear" }} className="absolute inset-0 w-full h-full">
-                  <video src="/HackMSIT.mp4" autoPlay loop muted playsInline className="w-full h-full " />
+                  <video src="/HackMSIT.mp4" autoPlay loop muted playsInline className="w-full h-full" />
                 </motion.div>
               </motion.div>
             </div>
           </section>
-
-          <Divider />
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          {/* <Divider /> */}
           <section id="tracks" className="py-12">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
               <motion.div {...fadeUp} className="text-center mb-16">
