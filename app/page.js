@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronDown, BookOpen, Users, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { WarRoom, ChoosePath, TimelineJourney, FinalCall, MSITCampusEnvironment } from "../components/InteractiveSections";
 const quotes = [
   "Honor the past. Build the future.",
   "True innovation requires unyielding foundations.",
@@ -392,27 +392,12 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="py-24 border-t border-brick/10 bg-parchment/20 backdrop-blur-md">
-            <div className="max-w-4xl mx-auto px-6 md:px-12">
-              <motion.div {...fadeUp} className="text-center mb-16">
-                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-4">Academic Itinerary</h2>
-                <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
-              </motion.div>
-              <div className="space-y-4">
-                {[
-                  { time: "10th - 09:00 AM", event: "Inaugural Ceremony & Briefing" },
-                  { time: "10th - 11:00 AM", event: "Hacking Commences" },
-                  { time: "10th - 11:00 PM", event: "Midnight Evaluation & Mentoring" },
-                  { time: "11th - 09:00 AM", event: "Exhibition & Final Judgment" }
-                ].map((schedule, i) => (
-                  <motion.div key={i} {...fadeUp} className="bg-parchment/50 backdrop-blur-sm p-6 flex flex-col md:flex-row md:items-center gap-4 rounded-sm border-l-4 border-l-antique-gold shadow-sm">
-                    <div className="font-sans text-sm tracking-widest text-brick-900/60 font-medium w-32 shrink-0">{schedule.time}</div>
-                    <div className="font-serif text-lg text-brick-900 font-bold">{schedule.event}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </section>
+          <MSITCampusEnvironment>
+            <TimelineJourney />
+            <WarRoom />
+            <ChoosePath />
+            <FinalCall />
+          </MSITCampusEnvironment>
 
         </div>
       </div>
