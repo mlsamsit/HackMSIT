@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, BookOpen, Users, ShieldCheck } from "lucide-react";
+import { ChevronDown, BookOpen, Users, ShieldCheck, Camera, Briefcase, Globe, Trophy, Medal, Award, Gift } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { WarRoom, ChoosePath, TimelineJourney, FinalCall, MSITCampusEnvironment } from "../components/InteractiveSections";
@@ -181,12 +181,14 @@ const Navbar = () => {
           <a href="#tracks" className="hover:text-antique-gold transition-colors">Tracks</a>
           <a href="#prizes" className="hover:text-antique-gold transition-colors">Prizes</a>
         </div>
-        <Link
-          href="/arena"
+        <a
+          href="https://unstop.com/p/hackmsit-msit-1667907?u="
+          target="_blank"
+          rel="noopener noreferrer"
           className={`px-6 py-2 rounded-sm border transition-all font-sans font-medium tracking-wide ${scrolled ? 'border-brick text-brick hover:bg-brick hover:text-parchment' : 'border-parchment text-parchment hover:bg-parchment/10'}`}
         >
           Apply Now
-        </Link>
+        </a>
       </div>
     </nav>
   );
@@ -250,13 +252,18 @@ export default function Home() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} className="flex items-center justify-center gap-4 mb-12">
             <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">10th & 11th</span>
             <span className="w-2 h-2 rotate-45 border border-antique-gold/50"></span>
-            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">₹30,000 Prize Pool</span>
+            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">₹50,000 Prize Pool</span>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="flex flex-col sm:flex-row gap-6">
-            <Link href="/arena" className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm">
+            <a
+              href="https://unstop.com/p/hackmsit-msit-1667907?u="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm"
+            >
               Complete Registration
-            </Link>
-            <Link href="/tracks" className="px-8 py-3 bg-transparent text-parchment border border-parchment/40 rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:border-parchment transition-all duration-300">
+            </a>
+            <Link href="/#tracks" className="px-8 py-3 bg-transparent text-parchment border border-parchment/40 rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:border-parchment transition-all duration-300">
               Discover More
             </Link>
           </motion.div>
@@ -373,19 +380,32 @@ export default function Home() {
           <section id="prizes" className="py-24">
             <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
               <motion.div {...fadeUp} className="mb-16">
-                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-2">₹30,000 Prize Pool</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-2">₹50,000 Prize Pool</h2>
                 <p className="font-sans text-brick-900/60 tracking-widest text-sm uppercase mb-4">Grants & Recognition</p>
                 <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
               </motion.div>
               <div className="space-y-4">
                 {[
-                  { label: "First Honor", amount: "₹15,000" },
-                  { label: "Second Honor", amount: "₹10,000" },
-                  { label: "Third Honor", amount: "₹5,000" }
+                  { label: "1st Position", amount: "₹15,000", extras: "+ Certificate & Awesome Swags", icon: Trophy, category: "Cash Winner" },
+                  { label: "2nd Position", amount: "₹10,000", extras: "+ Certificate & Awesome Swags", icon: Award, category: "Cash Runner-up" },
+                  { label: "3rd Position", amount: "₹5,000", extras: "+ Certificate & Awesome Swags", icon: Medal, category: "Cash 2nd Runner-up" },
+                  { label: "Sponsor Track 1", amount: "₹10,000", extras: "Cash Prize for Track Winners", icon: Gift, category: "Domain Winner" },
+                  { label: "Sponsor Track 2", amount: "₹10,000", extras: "Cash Prize for Track Winners", icon: Gift, category: "Domain Winner" }
                 ].map((prize, i) => (
                   <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="py-6 px-8 border border-brick/10 bg-parchment/30 backdrop-blur-sm hover:bg-parchment/50 transition-colors flex justify-between items-center rounded-sm">
-                    <span className="font-sans text-sm tracking-widest text-brick-900/60 uppercase font-medium">{prize.label}</span>
-                    <span className="font-serif text-2xl md:text-3xl font-bold text-antique-gold">{prize.amount}</span>
+                    <div className="flex items-center gap-6">
+                      <div className="p-3 bg-antique-gold/10 rounded-full">
+                        <prize.icon size={26} className="text-antique-gold" />
+                      </div>
+                      <div className="text-left">
+                        <span className="font-sans text-[10px] tracking-[0.2em] text-antique-gold uppercase font-bold block mb-1">{prize.category}</span>
+                        <h3 className="font-serif text-lg md:text-xl font-bold text-brick-900 leading-none mb-2">{prize.label}</h3>
+                        <p className="text-xs text-brick-900/60 font-sans italic">{prize.extras}</p>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <span className="font-serif text-2xl md:text-4xl font-black text-antique-gold">{prize.amount}</span>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -406,8 +426,21 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-serif text-xl tracking-widest mb-4 font-bold text-antique-gold">HACKMSIT 2026</h2>
           <p className="text-parchment/60 font-sans text-sm mb-8">Maharaja Surajmal Institute of Technology, New Delhi.</p>
+
+          <div className="flex justify-center gap-6 mb-8 text-antique-gold/80">
+            <a href="https://www.linkedin.com/company/mscmsit/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="hover:text-parchment transition-colors flex items-center gap-2 text-sm font-medium">
+              <Briefcase size={20} /> <span className="hidden sm:inline">LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/mscmsit/" target="_blank" rel="noopener noreferrer" className="hover:text-parchment transition-colors flex items-center gap-2 text-sm font-medium">
+              <Camera size={20} /> <span className="hidden sm:inline">Instagram</span>
+            </a>
+            <a href="https://mlsamsit.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-parchment transition-colors flex items-center gap-2 text-sm font-medium">
+              <Globe size={20} /> <span className="hidden sm:inline">Website</span>
+            </a>
+          </div>
+
           <div className="text-xs text-antique-gold/70 uppercase tracking-widest font-medium">
-            © 2026 HackMSIT. Crafted with discipline.
+            © 2026 HackMSIT. Hosted by MSC MSIT.
           </div>
         </div>
       </footer>

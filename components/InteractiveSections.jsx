@@ -351,9 +351,14 @@ export const FinalCall = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
-          <Link href="/arena" className="px-10 py-4 bg-brick-900 text-parchment font-sans tracking-widest uppercase text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-1 hover:bg-brick-800 transition-all duration-300">
+          <a 
+            href="https://unstop.com/p/hackmsit-msit-1667907?u=" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-4 bg-brick-900 text-parchment font-sans tracking-widest uppercase text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-1 hover:bg-brick-800 transition-all duration-300"
+          >
             Register Now
-          </Link>
+          </a>
           <a href="#" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
             Join Discord Community
           </a>
