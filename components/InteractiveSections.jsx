@@ -352,15 +352,15 @@ export const FinalCall = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
           <a 
-            href="https://unstop.com/p/hackmsit-msit-1667907?u=" 
+            href="https://unstop.com/o/tE0WM98?lb=Rz1BOh5M&utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Punamsin2640" 
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-brick-900 text-parchment font-sans tracking-widest uppercase text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-1 hover:bg-brick-800 transition-all duration-300"
           >
             Register Now
           </a>
-          <a href="#" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
-            Join Discord Community
+          <a href="https://chat.whatsapp.com/GLgTg322BBvIbUkFhmfZOk?mode=gi_t" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
+            Join Whatsapp Community
           </a>
         </motion.div>
       </motion.div>
