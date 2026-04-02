@@ -262,24 +262,25 @@ export const ChoosePath = () => {
 // 3. TIMELINE SECTION (Visual Journey)
 // ----------------------------------------------------
 const SCHEDULE_EVENTS = [
-  { day: "Day 1 (10th April)", time: "09:00 AM", title: "Gates Open & Registration", icon: Users, isSpecial: false },
-  { day: "Day 1 (10th April)", time: "10:00 AM", title: "The Inaugural Address", icon: Flag, isSpecial: false },
-  { day: "Day 1 (10th April)", time: "11:00 AM", title: "Hacking Commences", icon: Terminal, isSpecial: true },
-  { day: "Day 1 (10th April)", time: "01:00 PM", title: "Royal Feast (Lunch)", icon: Coffee, isSpecial: false },
-  { day: "Day 1 (10th April)", time: "05:00 PM", title: "Mentorship & Counsel Round 1", icon: ShieldCheck, isSpecial: false },
-  { day: "Day 2 (11th April)", time: "08:00 AM", title: "Dawn Hack Resumes", icon: Zap, isSpecial: false },
-  { day: "Day 2 (11th April)", time: "10:00 AM", title: "Mentorship Round 2", icon: ShieldCheck, isSpecial: false },
-  { day: "Day 2 (11th April)", time: "01:00 PM", title: "Final Commits & Judging", icon: Trophy, isSpecial: true },
-  { day: "Day 2 (11th April)", time: "05:00 PM", title: "Honors & Valedictory", icon: Award, isSpecial: true },
+  { day: "Day 1 (10th April 2026)", time: "09:00 AM", title: "Gates Open & Registration", icon: Users, isSpecial: false },
+  { day: "Day 1 (10th April 2026)", time: "10:00 AM", title: "The Inaugural Address", icon: Flag, isSpecial: false },
+  { day: "Day 1 (10th April 2026)", time: "11:00 AM", title: "Hacking Commences", icon: Terminal, isSpecial: true },
+  { day: "Day 1 (10th April 2026)", time: "01:00 PM", title: "Royal Feast (Lunch)", icon: Coffee, isSpecial: false },
+  { day: "Day 1 (10th April 2026)", time: "05:00 PM", title: "Mentorship & Counsel Round 1", icon: ShieldCheck, isSpecial: false },
+  { day: "Day 2 (11th April 2026)", time: "08:00 AM", title: "Dawn Hack Resumes", icon: Zap, isSpecial: false },
+  { day: "Day 2 (11th April 2026)", time: "09:00 AM", title: "Teams Selected from Round 1 (Day 1)", icon: Users, isSpecial: true },
+  { day: "Day 2 (11th April 2026)", time: "10:00 AM", title: "Mentorship Round 2", icon: ShieldCheck, isSpecial: false },
+  { day: "Day 2 (11th April 2026)", time: "01:00 PM", title: "Final Commits & Judging", icon: Trophy, isSpecial: true },
+  { day: "Day 2 (11th April 2026)", time: "05:00 PM", title: "Honors & Valedictory", icon: Award, isSpecial: true },
 ];
 
 export const TimelineJourney = () => {
   return (
-    <div className="relative w-full max-w-5xl mx-auto py-32 px-6 border-t border-brick-900/10">
+    <div id="timeline" className="relative w-full max-w-5xl mx-auto py-32 px-6 border-t border-brick-900/10">
       <div className="text-center mb-20">
         <h2 className="font-serif text-3xl md:text-5xl text-antique-gold font-bold mb-4 tracking-wide">The Academic Expedition</h2>
         <div className="w-16 h-[2px] bg-antique-gold mx-auto mb-6"></div>
-        <p className="font-sans text-brick-900/70 text-sm tracking-widest uppercase mb-6">A 48-Hour Legacy Timeline</p>
+        <p className="font-sans text-brick-900/70 text-sm tracking-widest uppercase mb-6">A 24-Hour Legacy Timeline</p>
       </div>
 
       <div className="relative border-l border-antique-gold/30 ml-4 md:ml-12 lg:ml-1/2 flex flex-col space-y-12">
@@ -352,15 +353,15 @@ export const FinalCall = () => {
           className="flex flex-col sm:flex-row gap-6 justify-center"
         >
           <a 
-            href="https://unstop.com/o/tE0WM98?lb=Rz1BOh5M&utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Punamsin2640" 
+            href="https://unstop.com/p/hackmsit-msit-1667907?u=" 
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-brick-900 text-parchment font-sans tracking-widest uppercase text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-1 hover:bg-brick-800 transition-all duration-300"
           >
             Register Now
           </a>
-          <a href="https://chat.whatsapp.com/GLgTg322BBvIbUkFhmfZOk?mode=gi_t"  target="_blank" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
-            Join Whatsapp Community
+          <a href="https://chat.whatsapp.com/GLgTg322BBvIbUkFhmfZOk?mode=gi_t" target="_blank" rel="noopener noreferrer" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
+            Join WhatsApp Community
           </a>
         </motion.div>
       </motion.div>
