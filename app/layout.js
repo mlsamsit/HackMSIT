@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "HackMSIT 2026",
+  title: "HackMSIT 1.0",
   description: "Built on Legacy. Driven by Innovation.",
 };
 

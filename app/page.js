@@ -174,7 +174,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-parchment/95 backdrop-blur-md py-4 shadow-sm border-b border-brick/10' : 'bg-transparent py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-        <h1 className={`font-serif text-2xl font-bold tracking-widest ${scrolled ? 'text-brick-900' : 'text-parchment'}`}>HACKMSIT</h1>
+        <h1 className={`font-serif text-2xl font-bold tracking-widest ${scrolled ? 'text-brick-900' : 'text-parchment'}`}>HACKMSIT 1.0</h1>
         <div className={`hidden md:flex gap-8 text-sm font-medium tracking-wide ${scrolled ? 'text-brick-900/80' : 'text-parchment/90'}`}>
           <a href="#about" className="hover:text-antique-gold transition-colors">About</a>
           <a href="#legacy" className="hover:text-antique-gold transition-colors">Legacy</a>
@@ -245,7 +245,7 @@ export default function Home() {
             </h2>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2 }} className="font-serif text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-parchment mb-6 drop-shadow-sm">
-            HACKMSIT
+            HACKMSIT 1.0
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.5 }} className="text-lg md:text-2xl font-serif italic text-parchment/90 mb-6">
             Built on Legacy. Driven by Innovation.
@@ -454,7 +454,7 @@ export default function Home() {
 
       <footer className="py-12 bg-brick-900 text-parchment text-center border-t border-antique-gold/30">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-xl tracking-widest mb-4 font-bold text-antique-gold">HACKMSIT 2026</h2>
+          <h2 className="font-serif text-xl tracking-widest mb-4 font-bold text-antique-gold">HACKMSIT 1.0</h2>
           <p className="text-parchment/60 font-sans text-sm mb-8">Maharaja Surajmal Institute of Technology, New Delhi.</p>
 
           <div className="flex justify-center gap-6 mb-8 text-antique-gold/80">
