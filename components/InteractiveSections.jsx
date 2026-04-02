@@ -359,7 +359,7 @@ export const FinalCall = () => {
           >
             Register Now
           </a>
-          <a href="https://chat.whatsapp.com/GLgTg322BBvIbUkFhmfZOk?mode=gi_t" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
+          <a href="https://chat.whatsapp.com/GLgTg322BBvIbUkFhmfZOk?mode=gi_t"  target="_blank" className="px-10 py-4 bg-transparent border border-brick-900/20 text-brick-900 font-sans tracking-widest uppercase text-sm font-bold hover:bg-brick-900/5 hover:border-antique-gold/50 hover:-translate-y-1 transition-all duration-300">
             Join Whatsapp Community
           </a>
         </motion.div>
