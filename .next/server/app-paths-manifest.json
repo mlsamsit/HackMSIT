@@ -1,9 +1,5 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/arena/page": "app/arena/page.js",
-  "/page": "app/page.js",
-  "/rules-faq/page": "app/rules-faq/page.js",
-  "/schedule/page": "app/schedule/page.js",
-  "/tracks/page": "app/tracks/page.js"
+  "/page": "app/page.js"
 }

@@ -40,30 +40,6 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
-    },
-    {
-      "page": "/arena",
-      "regex": "^/arena(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/arena(?:/)?$"
-    },
-    {
-      "page": "/rules-faq",
-      "regex": "^/rules\\-faq(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/rules\\-faq(?:/)?$"
-    },
-    {
-      "page": "/schedule",
-      "regex": "^/schedule(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/schedule(?:/)?$"
-    },
-    {
-      "page": "/tracks",
-      "regex": "^/tracks(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/tracks(?:/)?$"
     }
   ],
   "dataRoutes": [],
