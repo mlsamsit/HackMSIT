@@ -179,10 +179,11 @@ const Navbar = () => {
           <a href="#about" className="hover:text-antique-gold transition-colors">About</a>
           <a href="#legacy" className="hover:text-antique-gold transition-colors">Legacy</a>
           <a href="#tracks" className="hover:text-antique-gold transition-colors">Tracks</a>
+          <a href="#timeline" className="hover:text-antique-gold transition-colors">Timeline</a>
           <a href="#prizes" className="hover:text-antique-gold transition-colors">Prizes</a>
         </div>
         <a
-          href="https://unstop.com/p/hackmsit-msit-1667907?u="
+          href="https://unstop.com/o/tE0WM98?lb=Rz1BOh5M&utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Punamsin2640"
           target="_blank"
           rel="noopener noreferrer"
           className={`px-6 py-2 rounded-sm border transition-all font-sans font-medium tracking-wide ${scrolled ? 'border-brick text-brick hover:bg-brick hover:text-parchment' : 'border-parchment text-parchment hover:bg-parchment/10'}`}
@@ -250,13 +251,13 @@ export default function Home() {
             Built on Legacy. Driven by Innovation.
           </motion.p>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.6 }} className="flex items-center justify-center gap-4 mb-12">
-            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">10th & 11th</span>
+            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">10th - 11th April 2026</span>
             <span className="w-2 h-2 rotate-45 border border-antique-gold/50"></span>
-            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">₹50,000 Prize Pool</span>
+            <span className="text-parchment font-sans font-semibold tracking-widest uppercase text-base md:text-lg drop-shadow-sm">₹30,000+ Rewards & Prizes</span>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.7 }} className="flex flex-col sm:flex-row gap-6">
             <a
-              href="https://unstop.com/p/hackmsit-msit-1667907?u="
+              href="https://unstop.com/o/tE0WM98?lb=Rz1BOh5M&utm_medium=Share&utm_source=online_coding_challenge&utm_campaign=Punamsin2640"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-parchment text-brick-900 border border-parchment rounded-sm font-sans font-medium text-sm tracking-widest uppercase hover:bg-transparent hover:text-parchment transition-all duration-300 shadow-sm"
@@ -310,7 +311,7 @@ export default function Home() {
             <motion.div {...fadeUp} className="w-full max-w-4xl py-12 md:py-20">
               <h2 className="font-serif text-3xl md:text-7xl mb-8 font-bold">A Grounded Ecosystem</h2>
               <p className="font-serif text-xl md:text-2xl leading-relaxed text-brick-900/90">
-                HackMSIT provides a scholarly environment where 1000+ builders converge for 48 hours to craft elegant, meaningful software that withstands the test of time.
+                HackMSIT provides a scholarly environment where 1000+ builders converge for 24 hours to craft elegant, meaningful software that withstands the test of time.
               </p>
             </motion.div>
           </section>
@@ -355,14 +356,36 @@ export default function Home() {
           <section id="tracks" className="py-12">
             <div className="max-w-6xl mx-auto px-6 md:px-12">
               <motion.div {...fadeUp} className="text-center mb-16">
-                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-4">Domains of Study</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-4">Tracks & Competition Format</h2>
                 <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
               </motion.div>
               <div className="grid md:grid-cols-3 gap-8">
                 {[
-                  { icon: ShieldCheck, title: "Trust & Systems", desc: "Develop secure architectures, blockchain integrations, and resilient systems." },
-                  { icon: BookOpen, title: "Intelligence & Data", desc: "Train models, interpret data, and automate meaningful capabilities." },
-                  { icon: Users, title: "Society & Accessibility", desc: "Build tools that bridge gaps, improve public infrastructure, and serve communities." }
+                  {
+                    icon: BookOpen,
+                    title: "Themes / Problem Statements",
+                    points: [
+                      "PPT round follows an open theme: choose any problem statement and present your idea with a proposed solution.",
+                      "In the offline round, shortlisted teams will receive an on-the-spot problem statement to solve during the competition."
+                    ]
+                  },
+                  {
+                    icon: Users,
+                    title: "Eligibility & Registration",
+                    points: [
+                      "Open to all participants.",
+                      "Teams should complete registration before the event and be ready for both rounds."
+                    ]
+                  },
+                  {
+                    icon: ShieldCheck,
+                    title: "Competition Structure",
+                    points: [
+                      "Round 1: Online PPT Submission - Pitch, Present, Persuade.",
+                      "Round 2: Offline Round - Think, Solve, Present within the given time.",
+                      "Evaluation focuses on innovation, feasibility, clarity, creativity, and problem-solving approach."
+                    ]
+                  }
                 ].map((track, i) => (
                   <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.15 }} className="bg-parchment/40 backdrop-blur-md p-8 rounded-sm text-center border border-brick/10 shadow-sm relative group overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antique-gold/40 to-transparent group-hover:h-2 transition-all duration-700"></div>
@@ -370,7 +393,11 @@ export default function Home() {
                       <track.icon size={26} className="text-antique-gold stroke-[1.5px]" />
                     </div>
                     <h3 className="font-serif text-xl font-bold mb-3 text-brick-900">{track.title}</h3>
-                    <p className="text-brick-900/80 text-sm leading-relaxed">{track.desc}</p>
+                    <ul className="text-brick-900/80 text-sm leading-relaxed text-left space-y-2 list-disc pl-5">
+                      {track.points.map((point, idx) => (
+                        <li key={idx}>{point}</li>
+                      ))}
+                    </ul>
                   </motion.div>
                 ))}
               </div>
@@ -380,17 +407,20 @@ export default function Home() {
           <section id="prizes" className="py-24">
             <div className="max-w-4xl mx-auto px-6 md:px-12 text-center">
               <motion.div {...fadeUp} className="mb-16">
-                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-2">₹50,000 Prize Pool</h2>
-                <p className="font-sans text-brick-900/60 tracking-widest text-sm uppercase mb-4">Grants & Recognition</p>
+                <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-2">Rewards and Prizes</h2>
+                <p className="font-sans text-brick-900/60 tracking-widest text-sm uppercase mb-4">Cash Awards & Special Recognition</p>
                 <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
               </motion.div>
               <div className="space-y-4">
                 {[
-                  { label: "1st Position", amount: "₹15,000", extras: "+ Certificate & Awesome Swags", icon: Trophy, category: "Cash Winner" },
-                  { label: "2nd Position", amount: "₹10,000", extras: "+ Certificate & Awesome Swags", icon: Award, category: "Cash Runner-up" },
-                  { label: "3rd Position", amount: "₹5,000", extras: "+ Certificate & Awesome Swags", icon: Medal, category: "Cash 2nd Runner-up" },
-                  { label: "Sponsor Track 1", amount: "₹10,000", extras: "Cash Prize for Track Winners", icon: Gift, category: "Domain Winner" },
-                  { label: "Sponsor Track 2", amount: "₹10,000", extras: "Cash Prize for Track Winners", icon: Gift, category: "Domain Winner" }
+                  { label: "1st Rank", amount: "₹10,000", extras: "CASH", icon: Trophy, category: "Cash Award" },
+                  { label: "2nd Rank", amount: "₹6,000", extras: "CASH", icon: Award, category: "Cash Award" },
+                  { label: "3rd Rank", amount: "₹4,000", extras: "CASH", icon: Medal, category: "Cash Award" },
+                  { label: "Sponsored Track (DomAlyn Labs)", amount: "₹10,000", extras: "CASH", icon: Gift, category: "Cash Award" },
+                  { label: "Best Freshers", amount: "Goodies", extras: "4 T-Shirts + 4 Bottles", icon: Gift, category: "Special Award" },
+                  { label: "Best All Girls Team", amount: "Goodies", extras: "4 Hackquest T-Shirts + 4 Bottles", icon: Gift, category: "Special Award" },
+                  { label: "LinkedIn Engagement (FCFS)", amount: "50", extras: "Books", icon: Gift, category: "Engagement Award" },
+                  { label: "Participation Certificate", amount: "Certificate", extras: "For all participating teams", icon: Gift, category: "Participation" }
                 ].map((prize, i) => (
                   <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.1 }} className="py-6 px-8 border border-brick/10 bg-parchment/30 backdrop-blur-sm hover:bg-parchment/50 transition-colors flex justify-between items-center rounded-sm">
                     <div className="flex items-center gap-6">
