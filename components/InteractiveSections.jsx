@@ -6,7 +6,7 @@ import {
   ChevronRight, ChevronDown, Cpu, Code, ShieldCheck, Map, Trophy, BookOpen,
   Clock, Users, Coffee, Flag, Award, Terminal, Zap, Lightbulb, Star,
   CheckCircle, AlertTriangle, Globe, Brain, Lock, Compass, ArrowRight, X,
-  FileText, Target, Wrench, Info,
+  FileText, Target, Wrench, Info, Download,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -53,7 +53,7 @@ const COMP_TABS = [
         {
           title: "Round 1 — Online PPT Round",
           sub: "Select · Pitch · Persuade",
-          desc: "Choose from the finalized problem statements (Prompt Police or Hallucination Hunter). Craft a compelling solution deck and present your approach online.",
+          desc: "Choose from our specialized AI tracks or define your own challenge in the Open Theme. Craft a compelling solution deck and present your approach online.",
           tag: "Online",
         },
         {
@@ -185,9 +185,9 @@ export const CompetitionDetails = () => {
               <p className="font-sans text-xs uppercase tracking-widest text-brick-900/50 mb-4">Think. Solve. Present.</p>
 
               <ul className="space-y-2 font-sans text-sm text-brick-900/80 mb-4">
-                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> Problem statement provided on the spot.</li>
-                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> Teams solve within given time.</li>
-                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> Mentor-based elimination possible.</li>
+                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> Build and prototype the idea selected in Round 1.</li>
+                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> No new problem statements assigned on the spot.</li>
+                <li className="flex gap-2"><ChevronRight size={14} className="text-antique-gold shrink-0 mt-1" /> Mentor-based guidance available throughout.</li>
               </ul>
 
               <div className="pt-3 border-t border-brick-900/10">
@@ -348,7 +348,7 @@ const ProblemModal = ({ problem, onClose }) => {
 
               <div>
                 <h4 className="font-sans text-xs uppercase tracking-widest text-brick-900/40 mb-3">Suggested Starter Kit</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-8">
                   {problem.tools.map((t) => (
                     <li key={t} className="flex items-center gap-2 text-sm font-sans text-brick-900/70">
                       <Wrench size={12} className="text-antique-gold shrink-0" />
@@ -356,6 +356,15 @@ const ProblemModal = ({ problem, onClose }) => {
                     </li>
                   ))}
                 </ul>
+                <a
+                  href="https://drive.google.com/file/d/19oBzz6xd3DQXOCm-fFC0zIb6EVLLcK1J/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 border border-antique-gold text-antique-gold hover:bg-antique-gold hover:text-parchment transition-all font-sans text-xs font-bold uppercase tracking-widest rounded-sm w-full justify-center"
+                >
+                  <span>Problem Statement Documentation</span>
+                  <Download size={14} />
+                </a>
               </div>
             </div>
           </div>
@@ -392,7 +401,7 @@ export const ProblemStatements = () => {
             <div className="md:w-3/4 md:pl-10">
               <h3 className="font-serif text-2xl md:text-3xl font-bold text-brick-900 mb-2">PPT Round Open Innovation</h3>
               <p className="font-sans text-brick-900/70 text-base leading-relaxed">
-                This hackathon follows an open theme for the PPT round. Teams are inherently free to choose any problem statement from any domain, and present their visionary idea along with a proposed architectural solution.
+                This hackathon follows an open theme for the PPT round. Teams are free to choose any domain, present their visionary idea, and — if shortlisted — build that exact solution during the offline hackathon.
               </p>
             </div>
           </div>
@@ -405,9 +414,20 @@ export const ProblemStatements = () => {
         </div>
 
         {/* Section B: Sponsored Tracks */}
-        <motion.div {...fadeUp} className="mb-8 text-center md:text-left">
-          <h3 className="font-serif text-2xl font-bold text-brick-900">Sponsored Track Problem Statements</h3>
-          <p className="font-sans text-sm text-brick-900/60 mt-2">Specialized AI tracks available. Click any card to explore in detail.</p>
+        <motion.div {...fadeUp} className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div className="text-center md:text-left">
+            <h3 className="font-serif text-2xl font-bold text-brick-900">Sponsored Track Problem Statements</h3>
+            <p className="font-sans text-sm text-brick-900/60 mt-2">Specialized AI tracks available. Click any card to explore in detail.</p>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/19oBzz6xd3DQXOCm-fFC0zIb6EVLLcK1J/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-antique-gold hover:text-antique-gold/80 transition-colors font-sans text-xs font-bold uppercase tracking-widest border-b border-antique-gold/30 pb-1"
+          >
+            <span>Problem Statement Documentation</span>
+            <Download size={14} />
+          </a>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -691,10 +711,10 @@ export const ChoosePath = () => {
                   <div className="flex items-center justify-between border-b border-antique-gold/20 pb-4 mb-6">
                     <h3 className="font-serif text-2xl font-bold text-brick-900">Your Strategy Output</h3>
                     <div className="flex gap-2">
-                      <span className="text-[10px] font-sans uppercase tracking-widest text-antique-gold font-bold bg-antique-gold/10 px-2 py-1 rounded-sm capitalize">
+                      <span className="text-[10px] font-sans uppercase tracking-widest text-antique-gold font-bold bg-antique-gold/10 px-2 py-1 rounded-sm">
                         {primaryPath === "open" ? "Open Theme" : PROBLEM_PATHS.find(p => p.id === problemPath)?.label}
                       </span>
-                      {level && <span className="text-[10px] font-sans uppercase tracking-widest text-antique-gold font-bold bg-antique-gold/10 px-2 py-1 rounded-sm capitalize">{level}</span>}
+                      {level && <span className="text-[10px] font-sans uppercase tracking-widest text-antique-gold font-bold bg-antique-gold/10 px-2 py-1 rounded-sm">{level}</span>}
                     </div>
                   </div>
 
@@ -738,12 +758,12 @@ export const ChoosePath = () => {
 const WAR_ROOM_HOTSPOTS = [
   {
     id: "tracks", title: "Battlegrounds", shortDesc: "Domain Overview",
-    content: "Two core arenas: AI Safety and AI Trustworthiness. Each rewards distinct strategies and deep domain thinking.",
+    content: "Three core arenas: AI Safety, AI Trustworthiness, and Open Theme. Each rewards distinct strategies and deep domain thinking.",
     icon: Map,
   },
   {
     id: "problem", title: "Problem Statements", shortDesc: "Decrees of the Event",
-    content: "Problem statements have been finalized and are available to all participants. Start building your solutions based on Prompt Police or Hallucination Hunter.",
+    content: "Participants can choose from our specialized AI tracks (Prompt Police or Hallucination Hunter) or define their own challenge in the Open Theme. No new problem statements will be assigned on-site.",
     icon: BookOpen,
   },
   {

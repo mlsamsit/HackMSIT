@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, BookOpen, Users, ShieldCheck, Camera, Briefcase, Globe, Trophy, Medal, Award, Gift, Brain } from "lucide-react";
+import { ChevronDown, BookOpen, Users, ShieldCheck, Camera, Briefcase, Globe, Trophy, Medal, Award, Gift, Brain, Lightbulb } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { WarRoom, ChoosePath, TimelineJourney, FinalCall, MSITCampusEnvironment, CompetitionDetails, ProblemStatements } from "../components/InteractiveSections";
@@ -358,10 +358,11 @@ export default function Home() {
                 <h2 className="font-serif text-3xl md:text-4xl text-antique-gold font-bold mb-4">Domains of Study</h2>
                 <div className="w-16 h-[2px] bg-antique-gold mx-auto"></div>
               </motion.div>
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {[
                   { icon: ShieldCheck, title: "AI Safety (Prompt Police)", desc: "Build classification systems that can reliably detect and prevent adversarial jailbreak attempts on LLMs." },
-                  { icon: Brain, title: "AI Trustworthiness (Hallucination Hunter)", desc: "Develop verification pipelines capable of identifying factual inconsistencies and hallucinations in AI-generated text." }
+                  { icon: Brain, title: "AI Trustworthiness (Hallucination Hunter)", desc: "Develop verification pipelines capable of identifying factual inconsistencies and hallucinations in AI-generated text." },
+                  { icon: Lightbulb, title: "Open Theme (Innovation)", desc: "Empowering visionary builders to tackle any real-world problem. Choose your own domain and craft a transformative digital solution from scratch." }
                 ].map((track, i) => (
                   <motion.div key={i} {...fadeUp} transition={{ delay: i * 0.15 }} className="bg-parchment/40 backdrop-blur-md p-8 rounded-sm text-center border border-brick/10 shadow-sm relative group overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-antique-gold/40 to-transparent group-hover:h-2 transition-all duration-700"></div>
